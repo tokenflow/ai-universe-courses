@@ -9,8 +9,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-# Set to empty string so site serves at root (http://127.0.0.1:4000/) instead of /jekyll-gitbook
+url:              'https://ai.feras.me'  # Custom production domain
+# Keep empty for root-level site both locally and in production
 baseurl:          ''
 rss:              RSS
 
