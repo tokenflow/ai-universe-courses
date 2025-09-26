@@ -60,8 +60,12 @@ collections:
   others:
     output: true
     permalink: /:collection/:path/
+  llm:
+    output: true
+    permalink: /:collection/:path/
 
 ordered_collections:
+  - llm
   - posts
   - pages
   - others
@@ -76,3 +80,18 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jemoji
+
+# Search configuration for gitbook-style search_plus_index.json
+# This enables inclusion of regular HTML pages and specified collections in the search index.
+gitbook_search:
+  include:
+    pages: true            # include site.html_pages (like README-based home, about, etc.)
+    collections:
+      - llm
+      - posts
+      - pages
+      - others
+  exclude:
+    files: []              # list relative paths you want excluded
+    tags: []               # list tags to exclude
+    categories: []         # list categories to exclude

@@ -7,3 +7,7 @@ layout: post
 ---
 
 This is an contact page.
+
+
+
+[Connect on LinkedIn](https://www.linkedin.com/in/feraskanaan/)
