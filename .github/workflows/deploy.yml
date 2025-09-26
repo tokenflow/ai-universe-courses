@@ -21,11 +21,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: 'DEBUG: Show checked-out files and Gemfile content'
+        run: |
+          echo "--- Workspace files ---"
+          ls -la
+          echo "--- Gemfile content ---"
+          cat Gemfile
+          echo "--- Gemfile.lock Ruby version ---"
+          grep -A 2 "RUBY VERSION" Gemfile.lock || echo "RUBY VERSION not found in lockfile"
+          echo "--- End of debug ---"
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3.9' # Align with Gemfile (~> 3.3)
           bundler-cache: true
+          cache-version: 1 # Increment to bust cache
 
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
