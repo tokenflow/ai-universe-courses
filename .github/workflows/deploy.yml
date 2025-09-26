@@ -24,11 +24,18 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: '3.3.9' # Align with Gemfile (~> 3.3)
           bundler-cache: true
 
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
+
+      - name: Check Bundler platforms
+        run: |
+          echo "Current Bundler platforms:" && grep -A5 PLATFORMS Gemfile.lock || true
+          # Fail if required platforms missing
+          grep -A5 PLATFORMS Gemfile.lock | grep arm64-darwin >/dev/null || (echo 'Missing arm64-darwin in Gemfile.lock' && exit 1)
+          grep -A5 PLATFORMS Gemfile.lock | grep x86_64-linux >/dev/null || (echo 'Missing x86_64-linux in Gemfile.lock' && exit 1)
 
       - name: Build site
         env:
