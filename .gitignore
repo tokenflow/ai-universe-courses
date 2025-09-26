@@ -1,0 +1,60 @@
+############################################
+# Build output (Jekyll)
+############################################
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Drafts (if you keep unpublished work separate)
+_draft/
+
+############################################
+# Sass / CSS tooling caches
+############################################
+.sass-cache/
+.cache/
+
+############################################
+# Bundler / Ruby
+############################################
+.bundle/
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+
+############################################
+# Node (if you introduce JS tooling later)
+############################################
+node_modules/
+
+############################################
+# Editor & IDE
+############################################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+############################################
+# System / OS
+############################################
+.DS_Store
+Thumbs.db
+
+############################################
+# Environment / secrets (add any local overrides)
+############################################
+.env
+.env.*
+
+############################################
+# Temporary / misc
+############################################
+tmp/
+log/
+coverage/
+
+# Uncomment if you do NOT want to commit lockfile (generally keep it for apps)
+# Gemfile.lock
+
