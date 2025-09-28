@@ -63,9 +63,13 @@ collections:
   llm:
     output: true
     permalink: /:collection/:path/
+  agentic:
+    output: true
+    permalink: /:collection/:path/
 
 ordered_collections:
   - llm
+  - agentic
   - posts
   - pages
   - others
@@ -88,6 +92,7 @@ gitbook_search:
     pages: true            # include site.html_pages (like README-based home, about, etc.)
     collections:
       - llm
+      - agentic
       - posts
       - pages
       - others

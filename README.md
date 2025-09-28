@@ -116,3 +116,10 @@ Our goal is simple: **make world-class AI education accessible to everyone**.
 
 #### Automatic Differentiation (DL 26)
 [<img src="http://img.youtube.com/vi/vi6kNSLeosc/0.jpg" alt="Automatic Differentiation (DL 26)" style="zoom:33%;" />](http://www.youtube.com/watch?v=vi6kNSLeosc)
+
+
+## Reindex page
+
+make reindex
+
+
